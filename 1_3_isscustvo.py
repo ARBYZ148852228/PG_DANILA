@@ -6,9 +6,10 @@ import time
 # Инициализация PyGame
 pygame.init()
 size = (1280, 720)
+
 screen = pygame.display.set_mode(size, pygame.FULLSCREEN)
 pygame.display.set_caption('Discoteca')
-FPS = 30
+FPS = 0
 clock = pygame.time.Clock()
 running = True
 
