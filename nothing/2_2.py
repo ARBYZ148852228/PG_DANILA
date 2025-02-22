@@ -1,4 +1,3 @@
-from winreg import REG_DWORD
 from all_colors import *
 import pygame
 pygame.init()

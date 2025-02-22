@@ -1,5 +1,4 @@
-import pygame
-from  all_colors import *
+from all_colors import *
 pygame.init()
 size = (1280, 720)
 screen = pygame.display.set_mode(size)

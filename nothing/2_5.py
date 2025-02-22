@@ -1,6 +1,3 @@
-from winreg import REG_DWORD
-from random import choice
-from pygame.constants import *
 from all_colors import *
 import pygame
 pygame.init()
@@ -10,12 +7,21 @@ pygame.display.set_caption('Моя Игра')
 BACKGROUND = (255, 255, 255)
 screen.fill(BACKGROUND)
 FPS = 60
-x, y = 50, 50
-color = BLUE
-speed = 5
+x, y = 0, 0
+rect_size = 200
+colors = [RED, BLACK]
 clock = pygame.time.Clock()
 running = True
-rect = pygame.Rect(0, 100, 200, 150)
+
+
+
+rect1 = pygame.Rect(x, y, rect_size, rect_size)
+rect1.center = (screen.get_width()// 2, screen.get_height()//2)
+pygame.draw.rect(screen, BLACK, rect1)
+
+rect2 = pygame.Rect(x, y, 100, 100)
+rect2.center = (screen.get_width()// 2, screen.get_height()//2)
+pygame.draw.rect(screen, RED, rect2)
 
 
 while running:
@@ -23,18 +29,12 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    rect.x += speed
-    if rect.x > screen.get_width():
-        rect.x = -rect.width
 
 
 
 
 
 
-
-    screen.fill(BACKGROUND)
-    pygame.draw.rect(screen, BLUE, rect)
     pygame.display.flip()
     clock.tick(FPS)
 

@@ -1,4 +1,3 @@
-from winreg import REG_DWORD
 from random import choice
 from pygame.constants import *
 from all_colors import *

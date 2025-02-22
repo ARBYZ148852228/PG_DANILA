@@ -14,10 +14,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    pygame.display.update()
-    clock.tick(FPS)
-    if event.type == pygame.QUIT:
-        running = False
+
 
     screen.fill(BACKGROUND)
     pygame.display.update()

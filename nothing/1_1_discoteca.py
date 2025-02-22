@@ -1,4 +1,3 @@
-import pygame
 from all_colors import *
 import random
 
