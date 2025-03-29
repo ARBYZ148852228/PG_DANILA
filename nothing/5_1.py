@@ -1,3 +1,5 @@
+from all_colors import*
+from random import choice
 import math
 import pygame
 pygame.init()
@@ -13,6 +15,7 @@ running = True
 dragging = False
 filling = False
 RECTANGLE_COLOR = (255, 0, 0)
+rectangles = []
 
 while running:
     for event in pygame.event.get():
@@ -31,6 +34,9 @@ while running:
             right_bottom = event.pos
             size = (right_bottom[0] - top_left[0], right_bottom[1] - top_left[1])
             dragging = False
+            rect = pygame.Rect(top_left, size)
+            color = choice(COLORS)
+            rectangles.append((rect, color))
 
 
 
