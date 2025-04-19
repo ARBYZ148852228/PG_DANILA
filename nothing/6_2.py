@@ -18,6 +18,7 @@ def highlight_closest_point(mouse_pos):
     if closest_point is not None:
         pygame.draw.circle(screen, HIGHTLIGHT_COLOR, closest_point, POINT_RADIUS)
 
+
 size = (1280, 720)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption('рисование линий')
@@ -42,9 +43,9 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            if event.button == 1:
-                points.append(event.pos)
-            elif event.button == 3:
+            if closest.point:
+                event.button == 3:
+
                 remove_point(event.pos)
 
 
